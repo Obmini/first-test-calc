@@ -1,0 +1,23 @@
+:root{
+--bg:#f4f7fb;
+--panel:#ffffff;
+--accent:#1f6feb;
+--text:#222;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, Arial, sans-serif;background:var(--bg);color:var(--text)}
+body{display:flex;align-items:center;justify-content:center;padding:24px}
+.calculator{width:320px;background:var(--panel);border-radius:12px;box-shadow:0 10px 30px rgba(20,30,60,0.08);overflow:hidden}
+.display{padding:18px;background:linear-gradient(180deg,#f7f9fc,#fff);border-bottom:1px solid #eee}
+.prev{font-size:14px;color:#6b7280;min-height:18px;text-align:right}
+.output{font-size:36px;font-weight:600;text-align:right;min-height:44px}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px}
+.btn{padding:16px;border-radius:10px;border:0;background:#f3f4f6;font-size:18px;cursor:pointer;box-shadow:inset 0 -2px 0 rgba(0,0,0,0.03)}
+.btn:active{transform:translateY(1px)}
+.op{background:#e6eefc}
+.operator{background:#fde68a}
+.eq{background:var(--accent);color:#fff;grid-column:4/5}
+.num.wide{grid-column:1/3}
+
+
+@media (max-width:380px){.calculator{width:100%}}
